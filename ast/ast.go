@@ -211,7 +211,7 @@ func (bs *BlockStatement) String() string {
 }
 
 type FunctionLiteral struct {
-	Token      token.Token
+	Token      token.Token // The 'fn' token
 	Parameters []*Identifier
 	Body       *BlockStatement
 }
