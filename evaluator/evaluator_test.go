@@ -1,6 +1,7 @@
 package evaluator
 
 import (
+	"fmt"
 	"monkey/lexer"
 	"monkey/object"
 	"monkey/parser"
@@ -379,6 +380,9 @@ func TestBuiltinFunctions(t *testing.T) {
 	}
 
 	for _, tt := range tests {
+		if tt.input == "push([], 1)" {
+			fmt.Print("here")
+		}
 		evaluated := testEval(tt.input)
 
 		switch expected := tt.expected.(type) {
